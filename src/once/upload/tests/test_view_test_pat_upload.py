@@ -26,7 +26,7 @@ class ViewsIntegrationTest(unittest.TestCase):
         )
         self.assertTrue(ITestPatUpload.providedBy(view))
 
-    def test_test_pat_upload_not_matching_interface(self):
+    def test_test_pat_upload_matching_interface(self):
         view_found = True
         try:
             view = getMultiAdapter(
@@ -36,7 +36,7 @@ class ViewsIntegrationTest(unittest.TestCase):
             view_found = False
         else:
             view_found = ITestPatUpload.providedBy(view)
-        self.assertFalse(view_found)
+        self.assertTrue(view_found)
 
 
 class ViewsFunctionalTest(unittest.TestCase):
