@@ -1,0 +1,123 @@
+# Gettext Message File for once.upload
+msgid ""
+msgstr ""
+"Project-Id-Version: once\n"
+"Last-Translator: Rafael Bermúdez Horcajada <rber474@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: widgets\n"
+
+#: ./pat/upload/templates/preview.xml
+msgid "Delete"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload here"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Drag and drop files from your computer onto the area below or click the Browse button."
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "These are the accepted file extensions or mimetypes"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "All file types allowed."
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Drop files here..."
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Choose File"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Browse"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload to..."
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Select another destination folder or leave blank to add files to the current location."
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload"
+msgstr ""
+
+#: ./pat/upload/templates/upload.xml
+msgid "Cancel"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Drop files here to upload"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Your browser does not support dragndrop file uploads."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Please use the fallback form below to upload your files like in the olden days."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "You cant upload files of this type."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Server responded with {{statusCode}} code."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Cancel upload"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Upload canceled."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Are you sure you want to cancel this upload?"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Remove file"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "You can not upload any more files."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Delete {{filename}}"
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "File upload successfully completed."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "Some errors are ocurred while processing the upload. Please fix them before continue."
+msgstr ""
+
+#: ./pat/upload/upload.js
+msgid "The file transfer failed"
+msgstr ""
+

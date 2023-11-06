@@ -1,0 +1,41 @@
+
+<li id="template" class="file-row mb-3">
+    <div class="file-details row g-0">
+        <!-- This is used as the file preview template -->
+        <% if (createImageThumbnails) { %>
+        <div class="col-1">
+            <figure class="figure preview">
+                <img data-dz-thumbnail class="figure-img img-fluid rounded">
+            </figure>
+        </div>
+        <div class="col-11 row">
+        <% } else { %>
+        <div class="col-12 row">
+        <% } %>
+        <div class="name col-8" data-dz-name></div>
+            <div class="size col-3" data-dz-size></div>
+            <a
+                role="button"
+                class="remove-item col-1"
+                data-dz-remove=""
+                href="javascript:undefined;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle-fill text-danger mb-1" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                </svg>
+                <span class="sr-only"><%- _t("Delete") %><span data-dz-name /></span>
+            </a>
+        </div>
+        <div>
+            <% if (createImageThumbnails) { %>
+            <div class="progress progress-striped active col-md-9 offset-1"
+                style="height: 10px;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <% } else { %>
+            <div class="progress progress-striped active col-md-9"
+                style="height: 10px;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <% } %>
+            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+            </div>
+            <span class="error text-danger" data-dz-errormessage></span>
+        </div>
+    </div>
+</li>

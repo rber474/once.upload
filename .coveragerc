@@ -1,0 +1,6 @@
+[report]
+include =
+    src/once/*
+omit =
+    */test*
+    */upgrades/*

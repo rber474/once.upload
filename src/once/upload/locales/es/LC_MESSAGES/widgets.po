@@ -1,0 +1,124 @@
+# Gettext Message File for once.upload
+msgid ""
+msgstr ""
+"Project-Id-Version: once\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Rafael Bermúdez Horcajada <rber474@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: Spanish\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: widgets\n"
+
+#: ./pat/upload/templates/upload.xml
+msgid "All file types allowed."
+msgstr "Se permiten todos los tipos de archivo."
+
+#: ./pat/upload/upload.js
+msgid "Are you sure you want to cancel this upload?"
+msgstr "¿Está seguro de querer cancelar esta subida?"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Browse"
+msgstr "Explorar"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ./pat/upload/upload.js
+msgid "Cancel upload"
+msgstr "Cancelar subida"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Choose File"
+msgstr "Elegir archivo"
+
+#: ./pat/upload/templates/preview.xml
+msgid "Delete"
+msgstr "Eliminar"
+
+#: ./pat/upload/upload.js
+msgid "Delete {{filename}}"
+msgstr "Eliminar {{filename}}"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Drag and drop files from your computer onto the area below or click the Browse button."
+msgstr "Arrastre y suelte los archivos de su dispositivo en el área inferior o pulse el botón Explorar"
+
+#: ./pat/upload/upload.js
+msgid "Drop files here to upload"
+msgstr "Suelte los archivos aquí para cargarlos"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Drop files here..."
+msgstr "Soltar los archivos aquí..."
+
+#: ./pat/upload/upload.js
+msgid "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB."
+msgstr "El archivo es demasiado grande ({{filesize}}MiB). El tamaño máximo por archivo es {{maxFilesize}}MiB."
+
+#: ./pat/upload/upload.js
+msgid "File upload successfully completed."
+msgstr "La carga de archivos se ha completado correctamente."
+
+#: ./pat/upload/upload.js
+msgid "Please use the fallback form below to upload your files like in the olden days."
+msgstr "Por favor, utilice el formulario siguiente para cargar sus archivos como en 'los viejos \"tiempos\"."
+
+#: ./pat/upload/upload.js
+msgid "Remove file"
+msgstr "Eliminar archivo"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Select another destination folder or leave blank to add files to the current location."
+msgstr "Elija otra carpeta de destino e déjelo en blanco para añadir los archivos en la carpeta actual."
+
+#: ./pat/upload/upload.js
+msgid "Server responded with {{statusCode}} code."
+msgstr "El servidor responde con el código de estado {{statusCode}}."
+
+#: ./pat/upload/upload.js
+msgid "Some errors are ocurred while processing the upload. Please fix them before continue."
+msgstr "Se han producido algunos errores al procesar la carga de archivos. Por favor, corríjalos antes de continuar."
+
+#: ./pat/upload/upload.js
+msgid "The file transfer failed"
+msgstr "La transferencia de archivos ha fallado."
+
+#: ./pat/upload/templates/upload.xml
+msgid "These are the accepted file extensions or mimetypes"
+msgstr "Estos son los tipos y extensiones de archivo permitidas"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload"
+msgstr "Subir"
+
+#: ./pat/upload/upload.js
+msgid "Upload canceled."
+msgstr "Carga cancelada."
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload here"
+msgstr "Cargar aquí"
+
+#: ./pat/upload/templates/upload.xml
+msgid "Upload to..."
+msgstr "Subir a..."
+
+#: ./pat/upload/upload.js
+msgid "You can not upload any more files."
+msgstr "No puede subir más archivos."
+
+#: ./pat/upload/upload.js
+msgid "You cant upload files of this type."
+msgstr "No puede cargar archivos de este tipo."
+
+#: ./pat/upload/upload.js
+msgid "Your browser does not support dragndrop file uploads."
+msgstr "Su explorador no soporta carga de archivos del tipo \"soltar y arrastrar\"."

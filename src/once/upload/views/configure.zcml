@@ -1,0 +1,27 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="once.upload">
+
+ <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+    name="test-pat-upload"
+    for="*"
+    class=".test_pat_upload.TestPatUpload"
+    template="test_pat_upload.pt"
+    permission="zope2.View"
+    layer="once.upload.interfaces.IOnceUploadLayer"
+    />
+
+  <browser:page
+    name="custom-upload"
+    for="*"
+    class=".test_pat_upload.TestPatUpload"
+    permission="zope2.View"
+    layer="once.upload.interfaces.IOnceUploadLayer"
+    attribute="upload"
+    />
+
+</configure>
