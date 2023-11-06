@@ -11,7 +11,6 @@ import once.upload
 
 
 class OnceUploadLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):

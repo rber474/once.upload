@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
 # from once.upload import _
-import json
 from Products.Five.browser import BrowserView
 from zope.interface import implementer
 from zope.interface import Interface
 
+import json
 import logging
+
+
 logger = logging.getLogger(__name__)
 
 

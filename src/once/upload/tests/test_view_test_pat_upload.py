@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
-from once.upload.testing import ONCE_UPLOAD_FUNCTIONAL_TESTING
-from once.upload.testing import ONCE_UPLOAD_INTEGRATION_TESTING
-from once.upload.views.test_pat_upload import ITestPatUpload
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from zope.component import getMultiAdapter
 from zope.interface.interfaces import ComponentLookupError
+from once.upload.testing import ONCE_UPLOAD_FUNCTIONAL_TESTING
+from once.upload.testing import ONCE_UPLOAD_INTEGRATION_TESTING
+from once.upload.views.test_pat_upload import ITestPatUpload
 
 import unittest
 
 
 class ViewsIntegrationTest(unittest.TestCase):
-
     layer = ONCE_UPLOAD_INTEGRATION_TESTING
 
     def setUp(self):
@@ -41,7 +40,6 @@ class ViewsIntegrationTest(unittest.TestCase):
 
 
 class ViewsFunctionalTest(unittest.TestCase):
-
     layer = ONCE_UPLOAD_FUNCTIONAL_TESTING
 
     def setUp(self):

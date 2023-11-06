@@ -275,7 +275,7 @@ export default Base.extend({
         // Filter acceptedFiles in input, so browser will propose only
         // those files types
         if (self.options.acceptedFiles !== null) {
-            $(".dz-hidden-input").attr("accept", self.options.acceptedFiles)
+            $(".dz-hidden-input").attr("accept", self.options.acceptedFiles.replace(/\*/g, ''));
         }
 
         self.dropzone.on("maxfilesreached", function () {
@@ -462,7 +462,7 @@ export default Base.extend({
 
     _showHideControls: function () {
         var self = this;
-        var $controls = $(".controls", self.$el);
+        var $controls = $(".upload-controls", self.$el);
         var $browse = $(".browse-select", self.$el);
         var $input = $(".dz-hidden-input");
 

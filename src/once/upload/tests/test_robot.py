@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from once.upload.testing import ONCE_UPLOAD_ACCEPTANCE_TESTING  # noqa: E501
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
+from once.upload.testing import ONCE_UPLOAD_ACCEPTANCE_TESTING  # noqa: E501
 
 import os
-import robotsuite
 import unittest
+import robotsuite
 
 
 def test_suite():

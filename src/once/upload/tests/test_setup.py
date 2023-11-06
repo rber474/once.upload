@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
-from once.upload.testing import ONCE_UPLOAD_INTEGRATION_TESTING  # noqa: E501
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from once.upload.testing import ONCE_UPLOAD_INTEGRATION_TESTING  # noqa: E501
 
 import unittest
 
@@ -33,14 +33,13 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that IOnceUploadLayer is registered."""
-        from once.upload.interfaces import IOnceUploadLayer
         from plone.browserlayer import utils
+        from once.upload.interfaces import IOnceUploadLayer
 
         self.assertIn(IOnceUploadLayer, utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
-
     layer = ONCE_UPLOAD_INTEGRATION_TESTING
 
     def setUp(self):
@@ -60,7 +59,7 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that IOnceUploadLayer is removed."""
-        from once.upload.interfaces import IOnceUploadLayer
         from plone.browserlayer import utils
+        from once.upload.interfaces import IOnceUploadLayer
 
         self.assertNotIn(IOnceUploadLayer, utils.registered_layers())
