@@ -522,5 +522,3 @@ export default Base.extend({
     },
 
 });
-
-// export default upload;
