@@ -2,7 +2,6 @@ import _ from "underscore";
 import _t from "@plone/mockup/src/core/i18n-wrapper";
 import Base from "@patternslib/patternslib/src/core/base";
 import utils from "@plone/mockup/src/core/utils";
-// import upload from "@plone/mockup/src/pat/upload/upload"; // Importa el módulo de pat-upload
 
 
 let Dropzone;

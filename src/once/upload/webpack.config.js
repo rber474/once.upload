@@ -11,16 +11,6 @@ module.exports = () => {
         entry: {
             "bundle.min": path.resolve(__dirname, "pat/index"),
         },
-        resolve: {
-            extensions: ['.js', '.jsx', '.json', '.xml', '*.scss'],
-            alias: {
-                // Alias para sobrescribir el módulo upload de @plone/mockup
-                upload$: path.resolve(__dirname, "pat/upload/"),
-                "@plone/mockup/src/pat/upload/upload": path.resolve(__dirname, "pat/upload/upload"),
-                "@plone/mockup/src/pat/upload/upload.css": path.resolve(__dirname, "pat/upload/upload.css"),
-                "@plone/mockup/src/pat/upload/templates/": path.resolve(__dirname, "pat/upload/templates/"),
-            }
-        },
         optimization: {
             splitChunks: {
                 cacheGroups: {
@@ -80,15 +70,15 @@ module.exports = () => {
             },
             externals: {
                 "@plone/mockup": "@plone/mockup",
-                "bootstrap": "bootstrap",
-                "bootstrap-icons": "bootstrap-icons",
+                // "bootstrap": "bootstrap",
+                // "bootstrap-icons": "bootstrap-icons",
             },
-            patterns: {
-                "upload": {
-                  "selector": "pat-upload",
-                  "module": "__patternslib_mf__onceupload",
-                },
-            },
+            // patterns: {
+            //     "upload": {
+            //       "selector": "pat-upload",
+            //       "module": "__patternslib_mf__onceupload",
+            //     },
+            // },
         })
     );
 
