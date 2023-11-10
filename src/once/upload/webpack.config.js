@@ -41,12 +41,9 @@ module.exports = () => {
 
     config.plugins.push(
         mf_config({
-            name: "once-upload",
+            name: "upload",
             filename: "remote.min.js",
             remote_entry: config.entry["bundle.min"],
-            remotes: {
-                '@plone/mockup': '@plone/mockup', // Remoto para el paquete original
-              },
             dependencies: {
                 ...package_json_mockup.dependencies,
                 ...package_json.dependencies,
@@ -68,17 +65,6 @@ module.exports = () => {
                     eager: true,
                 }
             },
-            externals: {
-                "@plone/mockup": "@plone/mockup",
-                // "bootstrap": "bootstrap",
-                // "bootstrap-icons": "bootstrap-icons",
-            },
-            // patterns: {
-            //     "upload": {
-            //       "selector": "pat-upload",
-            //       "module": "__patternslib_mf__onceupload",
-            //     },
-            // },
         })
     );
 
