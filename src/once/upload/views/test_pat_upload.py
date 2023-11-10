@@ -33,3 +33,17 @@ class TestPatUpload(BrowserView):
         response.setHeader("Content-type", "application/json")
         response.setStatus(200)
         return json.dumps({"message": "Prueba de mensaje", "error": ""})
+
+    def json_settings(self):
+        """Configure dropzone"""
+
+        settings = {
+            "url": "custom-upload",
+            "acceptedFiles": ".pdf, .docx, .jpeg, .jpg",
+            "maxFiles": 5,
+            "maxFilesize": 12,
+            "createImageThumbnails": False,
+            "autoProcessQueue": False,
+            "uploadMultiple": False,
+        }
+        return json.dumps(settings)

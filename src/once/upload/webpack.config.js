@@ -12,22 +12,26 @@ module.exports = () => {
             "bundle.min": path.resolve(__dirname, "pat/index"),
         },
         resolve: {
-            extensions: ['.js', '.jsx', '.json', '.xml'],
+            extensions: ['.js', '.jsx', '.json', '.xml', '*.scss'],
             alias: {
                 // Alias para sobrescribir el módulo upload de @plone/mockup
-                "@plone/mockup/src/pat/upload/": path.resolve(__dirname, "pat/upload/"),
+                upload$: path.resolve(__dirname, "pat/upload/"),
+                "@plone/mockup/src/pat/upload/upload": path.resolve(__dirname, "pat/upload/upload"),
+                "@plone/mockup/src/pat/upload/upload.css": path.resolve(__dirname, "pat/upload/upload.css"),
+                "@plone/mockup/src/pat/upload/templates/": path.resolve(__dirname, "pat/upload/templates/"),
             }
         },
         optimization: {
             splitChunks: {
                 cacheGroups: {
-                    commons: {
+                    bootstrapIcons: {
                         test: /[\\/]node_modules[\\/]bootstrap-icons/,
                         name: 'vendors',
                         chunks: 'all',
+                        enforce: true,
                     },
                 },
-                minSize: 10000, // Establece un tamaño mínimo
+                minSize: 8000, // Establece un tamaño mínimo
             },
         },
     };
@@ -47,11 +51,11 @@ module.exports = () => {
 
     config.plugins.push(
         mf_config({
-            name: "upload",
+            name: "once-upload",
             filename: "remote.min.js",
             remote_entry: config.entry["bundle.min"],
             remotes: {
-                '@plone/mockup': 'plone_mockup', // Remoto para el paquete original
+                '@plone/mockup': '@plone/mockup', // Remoto para el paquete original
               },
             dependencies: {
                 ...package_json_mockup.dependencies,
@@ -65,7 +69,7 @@ module.exports = () => {
                 },
                 jquery: {
                     singleton: true,
-                    requiredVersion: "3.7.0",
+                    requiredVersion: "3.7.1",
                     eager: true,
                 },
                 "bootstrap-icons": {
@@ -78,7 +82,13 @@ module.exports = () => {
                 "@plone/mockup": "@plone/mockup",
                 "bootstrap": "bootstrap",
                 "bootstrap-icons": "bootstrap-icons",
-            }
+            },
+            patterns: {
+                "upload": {
+                  "selector": "pat-upload",
+                  "module": "__patternslib_mf__onceupload",
+                },
+            },
         })
     );
 

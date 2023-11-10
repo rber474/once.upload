@@ -9,8 +9,8 @@ let Dropzone;
 
 // Extender el patrón "upload" de @plone/mockup
 export default Base.extend({
-    name: "once-upload",
-    trigger: ".once-pat-upload",
+    name: "upload",
+    trigger: ".pat-upload",
     parser: "mockup",
     defaults: {
         // Dropzone options
