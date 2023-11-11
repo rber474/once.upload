@@ -2,15 +2,14 @@ import _ from "underscore";
 import _t from "@plone/mockup/src/core/i18n-wrapper";
 import Base from "@patternslib/patternslib/src/core/base";
 import utils from "@plone/mockup/src/core/utils";
-// import upload from "@plone/mockup/src/pat/upload/upload"; // Importa el módulo de pat-upload
 
 
 let Dropzone;
 
 // Extender el patrón "upload" de @plone/mockup
 export default Base.extend({
-    name: "once-upload",
-    trigger: ".once-pat-upload",
+    name: "upload",
+    trigger: ".pat-upload",
     parser: "mockup",
     defaults: {
         // Dropzone options
@@ -522,5 +521,3 @@ export default Base.extend({
     },
 
 });
-
-// export default upload;

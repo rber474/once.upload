@@ -11,15 +11,19 @@ module.exports = () => {
         entry: {
             "bundle.min": path.resolve(__dirname, "pat/index"),
         },
-        resolve: {
-            extensions: ['.js', '.jsx', '.json', '.xml'],
-            alias: {
-                // Alias para sobrescribir el módulo upload de @plone/mockup
-                // "upload": path.resolve(__dirname, "pat/upload/upload.js"),
-                "./pat/upload/upload": path.resolve(__dirname, "pat/upload/upload.js"),
-                // upload$: path.resolve(__dirname, "pat/upload"),
-            }
-        }
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    bootstrapIcons: {
+                        test: /[\\/]node_modules[\\/]bootstrap-icons/,
+                        name: 'vendors',
+                        chunks: 'all',
+                        enforce: true,
+                    },
+                },
+                minSize: 8000, // Establece un tamaño mínimo
+            },
+        },
     };
 
     config = webpack_config({
@@ -32,18 +36,35 @@ module.exports = () => {
     config.module.rules.push({
         test: /\.svg$/i,
         type: 'asset/resource',
+        exclude: path.join(__dirname, "node_modules/bootstrap-icons/icons/"),
     });
 
     config.plugins.push(
         mf_config({
-            name: "once-upload",
-            filename: "bundle-remote.min.js",
+            name: "upload",
+            filename: "remote.min.js",
             remote_entry: config.entry["bundle.min"],
             dependencies: {
                 ...package_json_mockup.dependencies,
                 ...package_json.dependencies,
             },
-            externals: 'bootstrap-icons'
+            shared: {
+                bootstrap: {
+                    singleton: true,
+                    requiredVersion: package_json.dependencies["bootstrap"],
+                    eager: true,
+                },
+                jquery: {
+                    singleton: true,
+                    requiredVersion: "3.7.1",
+                    eager: true,
+                },
+                "bootstrap-icons": {
+                    singleton: true,
+                    requiredVersion: package_json_mockup.dependencies["boostrap-icons"],
+                    eager: true,
+                }
+            },
         })
     );
 

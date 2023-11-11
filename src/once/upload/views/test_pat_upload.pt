@@ -27,15 +27,10 @@
 
     <h2>Main content</h2>
     <!--<div tal:replace="view/my_custom_view_method" />-->
-    <div class="once-pat-upload"
-        data-pat-once-upload='{
-          "url": "custom-upload",
-          "acceptedFiles": ".pdf, .docx, .jpeg, .jpg",
-          "maxFiles": 5,
-          "maxFilesize": 12,
-          "createImageThumbnails": false,
-          "autoProcessQueue": false,
-          "uploadMultiple": false }'/>
+    <div class="pat-upload" data-pat-upload=""
+      tal:define="settings view/json_settings;"
+      tal:attributes="data-pat-upload settings"
+    />
 
   </metal:block>
   </metal:content-core>
