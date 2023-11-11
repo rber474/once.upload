@@ -9,7 +9,7 @@
     <value key="load_async">False</value>
     <value key="load_defer">False</value>
     <value key="enabled">True</value>
-    <value key="jscompilation">++plone++once.upload/remote.min.js</value>
+    <value key="jscompilation">++plone++once.upload/bundle.min.js</value>
     <value key="csscompilation" />
   </records>
 
