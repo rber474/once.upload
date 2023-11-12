@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "rber474",
-  "license": "MIT",
+  "license": "GNU",
   "repository": {
     "type": "git",
     "url": "https://github.com/rber474/once.upload"
