@@ -1,3 +1,5 @@
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/rber474/once.upload/plone-package.yml?label=workflow)
+
 # once.upload
 
 > [!Warning]  
